@@ -1,0 +1,6 @@
+---
+- name: Runs backup script
+  hosts: all
+  tasks:
+    - name: Run shell script
+      command: sh /root/VMBackup.sh
