@@ -3,4 +3,6 @@
   hosts: all
   tasks:
     - name: Run shell script
-      command: sh /root/VMBackup.sh
+      shell: sh /root/VMBackup.sh
+      register: result
+      failed_when: result.rc not in [0, 2]
