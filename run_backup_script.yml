@@ -5,4 +5,4 @@
     - name: Run shell script
       shell: sh /root/VMBackup.sh
       register: result
-      failed_when: result.rc not in [0, 2]
+      failed_when: result.rc > 2
